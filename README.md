@@ -5,15 +5,18 @@ HEAD / GET
 ### Headers processed: 
 Connection
 ### Connection types: 
-'close'/'keep-alive'
+'close'
+'keep-alive'
 
-#### Example
-##### Terminal: 
+### Example
+#### Terminal: 
 $ telnet localhost 8080
 
-##### Telnet: 
+#### Telnet: 
 GET example with keep-alive connection type
+
 ![alt GET](request_samples/GET_Example.png)
 
 HEAD example with default (close) connection type
-![alt HEAD](request_samples/GET_Example.png)
+
+![alt HEAD](request_samples/HEAD_Example.png)
