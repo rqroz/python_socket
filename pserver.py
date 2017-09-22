@@ -6,6 +6,7 @@ from datetime import datetime
 # DEFAULT VALUES
 HOST = '' # Server IP
 PORT = 8080 # Server Port
+SERVER_CONN_TIMEOUT = 10 # Server connection timeout for clients
 SERVER_NAME = 'CONNET' # Server Name 
 BASE_FILE_PATH = "files_container" # Base path for files
 INDEX_PATH = "/index.html" # Index subpath file
@@ -125,7 +126,7 @@ while True:
 				# Split the string and check if it conforms with "Connection: (connection_type)"
 				connection_specifier, connection_type = connection_line.split(" ", 1)
 				if connection_specifier == 'Connection:' and connection_type == 'keep-alive':
-					client_connection.settimeout(10)
+					client_connection.settimeout(SERVER_CONN_TIMEOUT)
 
 			# Status previously set to 200 if method is GET or HEAD,
 			# but can change to 404 depending on file_path value (see get_objects function)
