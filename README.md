@@ -10,8 +10,10 @@
 * 'keep-alive'
 
 ### Example
-#### Terminal: 
+#### Terminal:
+```
 $ telnet localhost 8080
+```
 
 #### Telnet: 
 * GET example with keep-alive connection type
