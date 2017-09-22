@@ -1,9 +1,10 @@
 # python_socket
 
 ### Methods accepted: 
-HEAD / GET
+* HEAD
+* GET
 ### Headers processed: 
-Connection
+* Connection
 ### Connection types: 
 * 'close'
 * 'keep-alive'
