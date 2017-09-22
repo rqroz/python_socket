@@ -16,6 +16,8 @@ $ telnet localhost 8080
 ```
 
 #### Telnet (with server running): 
+- [x] After entering a line, the server will be waiting for headers. If you are done with the request, just type Enter (enter an empty line) again and it will be processed.  
+
 * GET example with keep-alive connection type  
   Request:  
   ```
@@ -40,6 +42,19 @@ $ telnet localhost 8080
   The connection will be opened and accepting other requests for SERVER_CONN_TIMEOUT seconds.  
   The client_connection's timeout will be reset to SERVER_CONN_TIMEOUT at each request if the Connection header is sent. Otherwise it will default to 'close'.    
 
-* HEAD example with default (close) connection type
+* HEAD example with default (close) connection type  
+  Request:  
+  ```
+    >> HEAD /test.html HTTP/1.1
+  ```
+  Expected Response:  
+  ```
+    HTTP/1.1 200 OK 
 
-  ![alt HEAD](request_samples/HEAD_Example.png)
+    Content-Length: 193
+    Date: 2017-09-20 15:13:00
+    Server: CONNET
+    Connection: close
+
+    Connection closed by foreign host.
+  ```
