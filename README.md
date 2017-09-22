@@ -16,7 +16,7 @@ $ telnet localhost 8080
 ```
 
 #### Telnet (with server running): 
-- [x] After entering a line, the server will be waiting for headers. If you are done with the request, just type Enter (enter an empty line) again and it will be processed.  
+- [x] After entering a line, the server will be waiting for headers. If you are done with the request, just type Enter (enter an empty line) again and the request will be processed.  
 
 * GET example with keep-alive connection type  
   Request:  
