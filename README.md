@@ -2,7 +2,7 @@
 
 ### Methods accepted: 
 HEAD / GET
-## Headers processed: 
+### Headers processed: 
 Connection
 ### Connection types: 
 'close'/'keep-alive'
