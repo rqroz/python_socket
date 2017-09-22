@@ -1,17 +1,17 @@
 # python_socket
 
-## Methods accepted: 
+### Methods accepted: 
 HEAD / GET
 ## Headers processed: 
 Connection
-## Connection types: 
+### Connection types: 
 'close'/'keep-alive'
 
-### Example
-#### Terminal: 
+#### Example
+##### Terminal: 
 $ telnet localhost 8080
 
-#### Telnet: 
+##### Telnet: 
 GET example with keep-alive connection type
 ![alt GET](request_samples/GET_Example.png)
 
