@@ -10,7 +10,7 @@ PORT = 8080 # Server Port
 SERVER_CONN_TIMEOUT = 10 # Server connection timeout for clients
 SERVER_NAME = 'CONNET' # Server Name 
 CONNECTION_TYPE_CLOSE = 'close' # Connection Type for closing connection
-METHOD_REGEX = '([A-Z]{3,4} (\/)?(\w{0,})(.html)? HTTP\/1.1)'
+METHOD_REGEX = '([A-Z]{3,4} [a-zA-Z0-9/]+([.][a-z]+)? HTTP\/1.1)'
 CONNECTION_REGEX = '(Connection: [a-z]+-?[a-z]+)'
 
 # cria o socket com IPv4 (AF_INET) usando TCP (SOCK_STREAM)
@@ -46,6 +46,7 @@ while True:
 		for lines in readlines(client_connection):
 			request += lines
 
+		# Get necessary lines ('GET / HTTP/1.1' and 'Connection: keep-alive', for example)
 		method_line = next((sub for sub in request if re.match(METHOD_REGEX, sub)), None)
 		connection_line = next((sub for sub in request if re.match(CONNECTION_REGEX, sub)), None)
 		
